@@ -1,0 +1,9 @@
+[project]
+name = "glossary"
+version = "0.1.0"
+description = "A glossary containing important Cover terms"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "django>=6.1.3",
+]
