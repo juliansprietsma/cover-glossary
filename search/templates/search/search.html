@@ -1,0 +1,11 @@
+{% if results %}
+
+<ul>
+    {% for result in results %}
+        <li>{{ result.term }}</li>
+    {% endfor %}
+</ul>
+
+{% else %}
+    <p>No definitions found</p>
+{% endif %}
