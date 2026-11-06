@@ -10,7 +10,7 @@ $ uv venv
 $ source .venv/bin/activate
 $ uv sync
 ```
-- setup the database connection. Make sure you have a postgres database running. Instructions on the postgres setup can be found here. Amend the `glossary/settings.py`, use the following setup:
+- setup the database connection. Make sure you have a postgres database running. Instructions on the postgres setup can be found [here](docs/POSTGRES.md). Amend the `glossary/settings.py`, use the following setup:
 ```python
 DATABASES = {
     'default': {
