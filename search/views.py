@@ -9,7 +9,7 @@ from django.db.models import Q, F
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, World")
+    return render(request, "search/index.html")
 
 def search(request):
     search_term = request.GET.get("search_term", '')

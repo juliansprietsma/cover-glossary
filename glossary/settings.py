@@ -80,8 +80,8 @@ DATABASES = {
         'NAME': 'glossary',
         'USER': 'glossary',
         'PASSWORD': 'password',
-        # 'HOST': 'host.docker.internal',
-        'HOST': '0.0.0.0',
+        'HOST': 'host.docker.internal',
+        # 'HOST': '0.0.0.0',
         'PORT': '5432'
     }
 }
