@@ -1,10 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from .models import Definition
 from django.contrib.postgres.search import TrigramSimilarity, SearchQuery, SearchVector
 from django.db.models.functions import Cast, Greatest
 from django.db import models
 from django.db.models import Q, F
+import json
 
 # Create your views here.
 
@@ -36,8 +37,6 @@ def search(request):
         )
     ).order_by("-similarity")
 
-    context = {
-        "results": results,
-    }
+    print("results")
 
-    return render(request, "search/search.html", context)
+    return JsonResponse({"results": list(results.values())}, safe=False)

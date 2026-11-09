@@ -57,9 +57,9 @@
             button.className = 'result';
             button.type = 'button';
             const name = document.createElement('span');
-            name.textContent = entry.word;
+            name.textContent = entry.term;
             const hint = document.createElement('small');
-            hint.textContent = entry.related ? 'Related term' : 'View definition';
+            hint.textContent = entry.aliases ? 'Related term' : 'View definition';
             button.append(name, hint);
             button.setAttribute('aria-expanded', 'false');
             const panel = document.createElement('div');
@@ -67,7 +67,7 @@
             const content = document.createElement('article');
             content.className = 'definition-content';
             const heading = document.createElement('h2');
-            heading.textContent = entry.word;
+            heading.textContent = entry.term;
             const paragraph = document.createElement('p');
             paragraph.textContent = entry.definition;
             content.append(heading, paragraph);
